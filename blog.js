@@ -37,14 +37,30 @@ function myFunction() {
   }
 }
 
+
 //more
 let more = document.querySelector(".more");
 let less = document.querySelector(".less");
 let lastText = document.querySelector(".last-text")
+let ul = document.querySelector(".ques1");
 more.addEventListener('click', function() {
+    ul.textContent = "";
     more.classList.add('display-none');
     less.classList.remove('display-none');
-    lastText.textContent = "Sometimes, you feel like you have a lot of work to do. And just because of this thinking we often loose our productivity. To tackle this I asked few questions to myself. Asking those questions to myself helped me decide my priorities in life. I figured out the not so urgent work that I often start my day with. The questions I asked to myself were: 1) Out of all those things I that I am doing. 2) What work I would be most proud of after 6 months? If I were to choose one task that I will get completed after 6 months, then what would it be? If you ask questions to yourself, you will get answers. That will help you gain clarity in your mind and make your day more productive.";
+    let firstPart = document.createElement("P");
+    let lastPart = document.createElement("P");
+    firstPart.textContent = "Sometimes, you feel like you have a lot of work to do. And just because of this thinking we often loose our productivity. To tackle this I asked few questions to myself. Asking those questions to myself helped me decide my priorities in life. I figured out the not so urgent work that I often start my day with. The questions I asked to myself were: ";
+    let li1 = document.createElement("LI");
+    let li2 = document.createElement("LI");
+    ul.append(li1);
+    ul.append(li2);
+    li1.textContent = "Out of all those things I that I am doing. What work I would be most proud of after 6 months?";
+    li2.textContent = "If I were to choose one task that I will get completed after 6 months, then what would it be? ";
+    lastPart.textContent = "If you ask questions to yourself, you will get answers. That will help you gain clarity in your mind and make your day more productive.";
+    lastText.textContent = "";
+    lastText.append(firstPart);
+    lastText.append(ul);
+    lastText.append(lastPart);
 })
 less.addEventListener('click', function() {
     less.classList.add('display-none');

@@ -47,6 +47,9 @@ hr {
     display: flex;
     justify-content: space-between;
 }
+.ques1 {
+  padding: 20px 10px;
+}
 
 
 
@@ -103,11 +106,10 @@ hr {
 }
 
 body {
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
   min-height: 100vh;
-  position: relative;
 }
 
 nav {
