@@ -107,3 +107,19 @@ less1.addEventListener('click', function() {
     lastText1.textContent = "Sometimes, you feel like you have a lot of work to do. And just because of this thinking we often loose our productivity. To tackle this I… ";
 })
 
+
+
+
+
+//inspirational
+let technical = document.querySelector(".technical")
+let inspirational = document.querySelector(".inspirational")
+let blogs = document.querySelector(".blogs")
+inspirational.addEventListener('click', function(e) {
+  e.defaultPrevented;
+  blogs.classList.remove("display-none");
+})
+technical.addEventListener('click', function(e) {
+  e.defaultPrevented;
+  blogs.classList.add("display-none");
+})
